@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Appointment {
+  id            String   @id @default(uuid())
+  service       String
+  firstName     String
+  lastName      String
+  email         String
+  phone         String
+  preferredDate DateTime
+  createdAt     DateTime @default(now())
+}
