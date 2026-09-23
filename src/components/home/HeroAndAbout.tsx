@@ -50,7 +50,7 @@ export default function HeroAndAbout() {
           style={{ y: heroY, opacity: heroOpacity }}
           className="absolute inset-0 z-0"
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black z-10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black z-10" />
           <AnimatePresence mode="popLayout">
             <motion.div
               key={currentImage}

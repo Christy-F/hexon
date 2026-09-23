@@ -62,13 +62,13 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="relative group flex items-center h-16">
+          <Link href="/" className="relative group flex items-center h-20">
             <Image
               src="/assets/hexon-logo-new.png"
               alt="Hexon Logo"
-              width={160}
-              height={50}
-              className="w-auto h-full max-h-12 object-contain"
+              width={260}
+              height={90}
+              className="w-auto h-full max-h-20 object-contain"
               priority
             />
           </Link>
@@ -84,7 +84,7 @@ export default function Navbar() {
               >
                 <Link
                   href={link.href}
-                  className="text-sm font-medium text-gray-300 hover:text-white transition-colors uppercase tracking-widest relative group py-4 block"
+                  className="text-sm font-medium text-white hover:text-white transition-colors uppercase tracking-widest relative group py-4 block"
                 >
                   {link.name}
                   <span className="absolute bottom-2 left-1/2 -translate-x-1/2 w-0 h-[1px] bg-[var(--color-hexon-gold)] transition-all duration-300 group-hover:w-full" />
@@ -105,7 +105,7 @@ export default function Navbar() {
                           <Link
                             key={subItem.name}
                             href={subItem.href}
-                            className="px-6 py-3 text-sm text-gray-400 hover:text-white hover:bg-white/5 transition-colors"
+                            className="px-6 py-3 text-sm text-white hover:bg-white/5 transition-colors"
                           >
                             {subItem.name}
                           </Link>

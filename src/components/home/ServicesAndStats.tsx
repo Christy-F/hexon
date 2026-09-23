@@ -1,7 +1,50 @@
 "use client";
 
-import React, { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import React, { useRef, useEffect, useState } from "react";
+import { motion, useScroll, useTransform, useInView } from "framer-motion";
+import { Briefcase, Users, Award, Smile } from "lucide-react";
+
+function AnimatedCounter({ value }: { value: string }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const [displayValue, setDisplayValue] = useState(0);
+
+  const match = value.match(/^([^\d]*)([\d,.]+)(.*)$/);
+  const prefix = match ? match[1] : "";
+  const target = match ? parseFloat(match[2].replace(/,/g, "")) : 0;
+  const suffix = match ? match[3] : value;
+
+  useEffect(() => {
+    if (!isInView || target === 0) return;
+
+    let startTime: number | null = null;
+    const duration = 2000;
+
+    const step = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      const easeOut = 1 - Math.pow(1 - progress, 3);
+      
+      setDisplayValue(Math.floor(easeOut * target));
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        setDisplayValue(target);
+      }
+    };
+
+    requestAnimationFrame(step);
+  }, [isInView, target]);
+
+  return (
+    <span ref={ref}>
+      {prefix}
+      {isInView ? displayValue.toLocaleString() : 0}
+      {suffix}
+    </span>
+  );
+}
 
 const services = [
   {
@@ -51,7 +94,7 @@ export default function ServicesAndStats() {
       {/* 3. SERVICES SHOWCASE */}
       <section ref={containerRef} className="relative w-full md:h-[300vh] bg-[#050505]">
         <div className="md:sticky top-0 md:h-screen w-full flex flex-col justify-center overflow-hidden py-24 md:py-0">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 30 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
@@ -71,19 +114,19 @@ export default function ServicesAndStats() {
             {/* Mobile View: Vertical Stack */}
             <div className="flex flex-col gap-8 px-6 md:hidden">
               {services.map((service, idx) => (
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
-                  key={idx} 
+                  key={idx}
                   className="relative w-full h-[400px] rounded-3xl overflow-hidden group shrink-0"
                 >
-                  <div 
+                  <div
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                     style={{ backgroundImage: `url(${service.image})` }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-                  
+
                   <div className="absolute bottom-0 left-0 w-full p-8">
                     <div className="w-10 h-[2px] bg-[var(--color-hexon-teal)] mb-4" />
                     <h4 className="text-2xl font-serif text-white mb-3">{service.title}</h4>
@@ -96,21 +139,21 @@ export default function ServicesAndStats() {
             </div>
 
             {/* Desktop View: Horizontal Scroll */}
-            <motion.div 
-              style={{ x }} 
+            <motion.div
+              style={{ x }}
               className="hidden md:flex gap-8 px-24 absolute left-0"
             >
               {services.map((service, idx) => (
-                <div 
-                  key={idx} 
+                <div
+                  key={idx}
                   className="relative w-[450px] h-[400px] rounded-3xl overflow-hidden group shrink-0"
                 >
-                  <div 
+                  <div
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                     style={{ backgroundImage: `url(${service.image})` }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-                  
+
                   <div className="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <div className="w-10 h-[2px] bg-[var(--color-hexon-teal)] mb-4" />
                     <h4 className="text-2xl font-serif text-white mb-3">{service.title}</h4>
@@ -129,12 +172,12 @@ export default function ServicesAndStats() {
       <section className="relative w-full py-24 bg-black border-y border-white/5">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
           {[
-            { value: "10+", label: "Years Experience" },
-            { value: "50k+", label: "Professionals Trained" },
-            { value: "200+", label: "Corporate Clients" },
-            { value: "98%", label: "Satisfaction Rate" },
+            { value: "20+", label: "Years Experience", icon: Briefcase },
+            { value: "50k+", label: "Professionals Trained", icon: Users },
+            { value: "200+", label: "Corporate Clients", icon: Award },
+            { value: "98%", label: "Satisfaction Rate", icon: Smile },
           ].map((stat, idx) => (
-            <motion.div 
+            <motion.div
               key={idx}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -142,14 +185,44 @@ export default function ServicesAndStats() {
               transition={{ duration: 0.6, delay: idx * 0.1 }}
               className="flex flex-col items-center"
             >
+              <div className="mb-6 text-[var(--color-hexon-teal)] bg-[var(--color-hexon-teal)]/10 p-4 rounded-full">
+                <stat.icon size={36} strokeWidth={1.5} />
+              </div>
               <h5 className="text-4xl md:text-6xl font-serif text-white mb-2">
-                {stat.value}
+                <AnimatedCounter value={stat.value} />
               </h5>
               <span className="text-[var(--color-hexon-teal)] text-sm tracking-widest uppercase font-medium">
                 {stat.label}
               </span>
             </motion.div>
           ))}
+        </div>
+      </section>
+
+      {/* 5. VIDEO SHOWCASE */}
+      <section className="relative w-full h-[60vh] md:h-[80vh] bg-black overflow-hidden border-y border-white/5">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover opacity-60"
+        >
+          {/* Default Unsplash/Pexels video placeholder. Can be replaced with actual video link */}
+          <source src="https://videos.pexels.com/video-files/3163534/3163534-uhd_3840_2160_30fps.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+
+        <div className="relative z-10 w-full h-full flex items-center justify-center text-center px-6">
+          <motion.h3
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-4xl md:text-6xl lg:text-7xl font-serif text-white max-w-5xl leading-tight drop-shadow-2xl"
+          >
+            Transforming Potential into <strong className="text-[var(--color-hexon-gold)] font-normal italic">Excellence</strong>
+          </motion.h3>
         </div>
       </section>
     </>
