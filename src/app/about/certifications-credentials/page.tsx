@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function CertificationsPage() {
   return (
-    <main className="w-full min-h-screen bg-[#0a0a0a] pt-32 pb-24 px-6 flex flex-col items-center">
+    <main className="w-full min-h-screen bg-white pt-32 pb-24 px-6 flex flex-col items-center">
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -14,7 +14,7 @@ export default function CertificationsPage() {
         <h1 className="text-[var(--color-hexon-gold)] text-sm tracking-[0.2em] uppercase font-semibold mb-6">
           About Us
         </h1>
-        <h2 className="text-5xl md:text-7xl font-serif text-white mb-8">
+        <h2 className="text-5xl md:text-7xl font-serif text-zinc-900 mb-8">
           Certifications & Credentials.
         </h2>
       </motion.div>
@@ -44,22 +44,22 @@ export default function CertificationsPage() {
         className="max-w-3xl w-full"
       >
         <ul className="space-y-6">
-          <motion.li variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0, transition: { duration: 0.5 } } }} className="bg-[#111] border border-white/10 p-6 rounded-2xl flex items-start gap-4 hover:border-[var(--color-hexon-teal)]/50 transition-colors duration-300">
+          <motion.li variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0, transition: { duration: 0.5 } } }} className="bg-white border border-black/10 p-6 rounded-2xl flex items-start gap-4 hover:border-[var(--color-hexon-teal)]/50 transition-colors duration-300">
             <span className="text-[var(--color-hexon-teal)] mt-1">✦</span>
-            <p className="text-gray-300 text-lg">
-              <strong className="text-white">"Competency based interviews"</strong> Interviewing skills, train the trainer certified by <em className="text-[var(--color-hexon-gold)]">Hemsley Fraser</em>.
+            <p className="text-gray-700 text-lg">
+              <strong className="text-zinc-900">"Competency based interviews"</strong> Interviewing skills, train the trainer certified by <em className="text-[var(--color-hexon-gold)]">Hemsley Fraser</em>.
             </p>
           </motion.li>
-          <motion.li variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0, transition: { duration: 0.5 } } }} className="bg-[#111] border border-white/10 p-6 rounded-2xl flex items-start gap-4 hover:border-[var(--color-hexon-teal)]/50 transition-colors duration-300">
+          <motion.li variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0, transition: { duration: 0.5 } } }} className="bg-white border border-black/10 p-6 rounded-2xl flex items-start gap-4 hover:border-[var(--color-hexon-teal)]/50 transition-colors duration-300">
             <span className="text-[var(--color-hexon-teal)] mt-1">✦</span>
-            <p className="text-gray-300 text-lg">
-              Completed <strong className="text-white">"Accredited Coach Training Program"</strong> from <em className="text-[var(--color-hexon-gold)]">Coacharya</em>.
+            <p className="text-gray-700 text-lg">
+              Completed <strong className="text-zinc-900">"Accredited Coach Training Program"</strong> from <em className="text-[var(--color-hexon-gold)]">Coacharya</em>.
             </p>
           </motion.li>
-          <motion.li variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0, transition: { duration: 0.5 } } }} className="bg-[#111] border border-white/10 p-6 rounded-2xl flex items-start gap-4 hover:border-[var(--color-hexon-teal)]/50 transition-colors duration-300">
+          <motion.li variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0, transition: { duration: 0.5 } } }} className="bg-white border border-black/10 p-6 rounded-2xl flex items-start gap-4 hover:border-[var(--color-hexon-teal)]/50 transition-colors duration-300">
             <span className="text-[var(--color-hexon-teal)] mt-1">✦</span>
-            <p className="text-gray-300 text-lg">
-              <strong className="text-white">"Instructional Design Basics"</strong> certified by <em className="text-[var(--color-hexon-gold)]">Vyaktitva</em>.
+            <p className="text-gray-700 text-lg">
+              <strong className="text-zinc-900">"Instructional Design Basics"</strong> certified by <em className="text-[var(--color-hexon-gold)]">Vyaktitva</em>.
             </p>
           </motion.li>
         </ul>

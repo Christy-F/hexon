@@ -29,12 +29,12 @@ export default function GalleryPage() {
   };
 
   return (
-    <main className="w-full min-h-screen bg-[#050505] pt-32 pb-24 px-6 flex flex-col items-center">
+    <main className="w-full min-h-screen bg-gray-50 pt-32 pb-24 px-6 flex flex-col items-center">
       <div className="max-w-4xl text-center mb-16 mt-20">
         <h1 className="text-[var(--color-hexon-gold)] text-sm tracking-[0.2em] uppercase font-semibold mb-6">
           Our Gallery
         </h1>
-        <h2 className="text-5xl md:text-7xl font-serif text-white mb-8">
+        <h2 className="text-5xl md:text-7xl font-serif text-zinc-900 mb-8">
           Moments of Growth.
         </h2>
       </div>
@@ -67,7 +67,7 @@ export default function GalleryPage() {
             {/* Close Button */}
             <button 
               onClick={closeLightbox}
-              className="absolute top-6 right-6 z-50 p-2 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors"
+              className="absolute top-6 right-6 z-50 p-2 bg-black/10 hover:bg-black/20 text-zinc-900 rounded-full transition-colors"
             >
               <X className="w-6 h-6" />
             </button>
@@ -75,7 +75,7 @@ export default function GalleryPage() {
             {/* Prev Button */}
             <button 
               onClick={showPrev}
-              className="absolute left-4 md:left-10 z-50 p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors"
+              className="absolute left-4 md:left-10 z-50 p-3 bg-black/10 hover:bg-black/20 text-zinc-900 rounded-full transition-colors"
             >
               <ChevronLeft className="w-8 h-8" />
             </button>
@@ -83,7 +83,7 @@ export default function GalleryPage() {
             {/* Next Button */}
             <button 
               onClick={showNext}
-              className="absolute right-4 md:right-10 z-50 p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors"
+              className="absolute right-4 md:right-10 z-50 p-3 bg-black/10 hover:bg-black/20 text-zinc-900 rounded-full transition-colors"
             >
               <ChevronRight className="w-8 h-8" />
             </button>

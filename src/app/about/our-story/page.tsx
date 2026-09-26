@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function OurStoryPage() {
   return (
-    <main className="w-full min-h-screen bg-[#0a0a0a] pt-32 pb-24 px-6 flex flex-col items-center overflow-hidden">
+    <main className="w-full min-h-screen bg-white pt-32 pb-24 px-6 flex flex-col items-center overflow-hidden">
       <div className="max-w-4xl text-center mb-16 mt-20">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
@@ -17,7 +17,7 @@ export default function OurStoryPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="text-5xl md:text-7xl font-serif text-white mb-8"
+          className="text-5xl md:text-7xl font-serif text-zinc-900 mb-8"
         >
           Our Story.
         </motion.h2>
@@ -32,15 +32,15 @@ export default function OurStoryPage() {
           whileInView={{ opacity: 1, x: 0, rotate: -3 }}
           whileHover={{ scale: 1.05, rotate: 0, zIndex: 30 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="relative md:absolute left-0 md:left-8 top-0 md:top-4 w-full md:w-[55%] bg-gradient-to-br from-[#00ADB3]/95 to-[#007b80]/95 p-10 md:p-14 rounded-[2.5rem] shadow-2xl z-10 backdrop-blur-md border border-white/20 origin-bottom-left flex flex-col justify-center"
+          className="relative md:absolute left-0 md:left-8 top-0 md:top-4 w-full md:w-[55%] bg-gradient-to-br from-[#00ADB3]/95 to-[#007b80]/95 p-10 md:p-14 rounded-[2.5rem] shadow-2xl z-10 backdrop-blur-md border border-black/20 origin-bottom-left flex flex-col justify-center"
         >
-          <div className="text-white/70 font-mono text-xs tracking-[0.3em] uppercase mb-8 flex items-center gap-4">
-            <span className="w-12 h-px bg-white/50"></span>
+          <div className="text-zinc-900/70 font-mono text-xs tracking-[0.3em] uppercase mb-8 flex items-center gap-4">
+            <span className="w-12 h-px bg-black/50"></span>
             01 // Vision
           </div>
-          <h3 className="text-4xl md:text-5xl font-serif text-white mb-6 leading-tight">Enabling individuals</h3>
-          <p className="text-white/90 text-xl md:text-2xl font-light leading-relaxed">
-            to maximize their <span className="font-semibold italic text-white">potential.</span>
+          <h3 className="text-4xl md:text-5xl font-serif text-zinc-900 mb-6 leading-tight">Enabling individuals</h3>
+          <p className="text-zinc-900/90 text-xl md:text-2xl font-light leading-relaxed">
+            to maximize their <span className="font-semibold italic text-zinc-900">potential.</span>
           </p>
         </motion.div>
 
@@ -50,7 +50,7 @@ export default function OurStoryPage() {
           whileInView={{ opacity: 1, x: 0, rotate: 3 }}
           whileHover={{ scale: 1.05, rotate: 0, zIndex: 30 }}
           transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
-          className="relative md:absolute right-0 md:right-8 bottom-0 md:-bottom-4 w-full md:w-[55%] bg-gradient-to-br from-[#1a1a1a]/80 to-[#050505]/95 p-10 md:p-14 rounded-[2.5rem] shadow-[0_30px_60px_rgba(0,0,0,0.8)] z-20 backdrop-blur-2xl border border-white/10 origin-top-right flex flex-col justify-center"
+          className="relative md:absolute right-0 md:right-8 bottom-0 md:-bottom-4 w-full md:w-[55%] bg-gradient-to-br from-white/95 to-gray-50/95 p-10 md:p-14 rounded-[2.5rem] shadow-[0_30px_60px_rgba(0,0,0,0.1)] z-20 backdrop-blur-2xl border border-black/10 origin-top-right flex flex-col justify-center"
         >
           <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--color-hexon-gold)]/10 blur-[80px] rounded-full"></div>
           
@@ -59,8 +59,8 @@ export default function OurStoryPage() {
               <span className="w-12 h-px bg-[var(--color-hexon-gold)]/50"></span>
               02 // Values
             </div>
-            <h3 className="text-4xl md:text-5xl font-serif text-white mb-6 leading-tight">Honesty, Commitment</h3>
-            <p className="text-gray-300 text-xl md:text-2xl font-light leading-relaxed">
+            <h3 className="text-4xl md:text-5xl font-serif text-zinc-900 mb-6 leading-tight">Honesty, Commitment</h3>
+            <p className="text-gray-700 text-xl md:text-2xl font-light leading-relaxed">
               & <span className="font-semibold italic text-[var(--color-hexon-gold)]">Consistent.</span>
             </p>
           </div>
@@ -90,7 +90,7 @@ export default function OurStoryPage() {
             transition: { staggerChildren: 0.2 }
           }
         }}
-        className="max-w-4xl text-gray-300 text-lg md:text-xl font-light leading-relaxed space-y-6"
+        className="max-w-4xl text-gray-700 text-lg md:text-xl font-light leading-relaxed space-y-6"
       >
         <motion.p variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }}>
           Hexon is a company dedicated to provide a plethora of learning solutions for various organisations and individuals. We aim at improving the overall business performance by enhancing the employees' skillsets. We offer highly engaging boot camps, experiential corporate trainings, competency-based workshops, one to one skill enhancement programs and coaching services in a structured way with a definite end objective.
@@ -107,7 +107,7 @@ export default function OurStoryPage() {
         <motion.p variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }}>
           We not only train & coach working professionals across industries, we are committed to engage with students, entrepreneurs & young aspirers there by supporting them in their personal & professional growth.
         </motion.p>
-        <motion.p variants={{ hidden: { opacity: 0, y: 20, scale: 0.95 }, visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6 } } }} className="text-white text-2xl font-serif italic mt-16 text-center">
+        <motion.p variants={{ hidden: { opacity: 0, y: 20, scale: 0.95 }, visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6 } } }} className="text-zinc-900 text-2xl font-serif italic mt-16 text-center">
           And "Yes" we believe every individual is unique & talented!
         </motion.p>
         <motion.p variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }} className="text-[var(--color-hexon-gold)] text-xl font-medium text-center">

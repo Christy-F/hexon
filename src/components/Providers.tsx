@@ -7,7 +7,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
   return (
     <ConfigProvider
       theme={{
-        algorithm: theme.darkAlgorithm,
+        algorithm: theme.defaultAlgorithm,
         token: {
           colorPrimary: "#00ADB3",
           fontFamily: "var(--font-inter)",

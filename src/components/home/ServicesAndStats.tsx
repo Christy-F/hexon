@@ -24,7 +24,7 @@ function AnimatedCounter({ value }: { value: string }) {
       if (!startTime) startTime = timestamp;
       const progress = Math.min((timestamp - startTime) / duration, 1);
       const easeOut = 1 - Math.pow(1 - progress, 3);
-      
+
       setDisplayValue(Math.floor(easeOut * target));
 
       if (progress < 1) {
@@ -92,7 +92,7 @@ export default function ServicesAndStats() {
   return (
     <>
       {/* 3. SERVICES SHOWCASE */}
-      <section ref={containerRef} className="relative w-full md:h-[300vh] bg-[#050505]">
+      <section ref={containerRef} className="relative w-full md:h-[300vh] bg-gray-50">
         <div className="md:sticky top-0 md:h-screen w-full flex flex-col justify-center overflow-hidden py-24 md:py-0">
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 30 }}
@@ -104,7 +104,7 @@ export default function ServicesAndStats() {
             <h2 className="text-[var(--color-hexon-gold)] text-sm tracking-[0.2em] uppercase font-semibold mb-4">
               Our Expertise
             </h2>
-            <h3 className="text-4xl md:text-5xl font-serif text-white">
+            <h3 className="text-4xl md:text-5xl font-serif text-zinc-900">
               Solutions that drive impact.
             </h3>
           </motion.div>
@@ -125,12 +125,12 @@ export default function ServicesAndStats() {
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                     style={{ backgroundImage: `url(${service.image})` }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
 
                   <div className="absolute bottom-0 left-0 w-full p-8">
                     <div className="w-10 h-[2px] bg-[var(--color-hexon-teal)] mb-4" />
                     <h4 className="text-2xl font-serif text-white mb-3">{service.title}</h4>
-                    <p className="text-gray-300 text-sm leading-relaxed">
+                    <p className="text-gray-200 text-sm leading-relaxed">
                       {service.description}
                     </p>
                   </div>
@@ -152,12 +152,12 @@ export default function ServicesAndStats() {
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                     style={{ backgroundImage: `url(${service.image})` }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
 
                   <div className="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <div className="w-10 h-[2px] bg-[var(--color-hexon-teal)] mb-4" />
                     <h4 className="text-2xl font-serif text-white mb-3">{service.title}</h4>
-                    <p className="text-gray-300 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                    <p className="text-gray-200 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                       {service.description}
                     </p>
                   </div>
@@ -169,7 +169,7 @@ export default function ServicesAndStats() {
       </section>
 
       {/* 4. ANIMATED STATS / IMPACT */}
-      <section className="relative w-full py-24 bg-black border-y border-white/5">
+      <section className="relative w-full py-24 bg-white border-y border-black/5">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
           {[
             { value: "20+", label: "Years Experience", icon: Briefcase },
@@ -188,7 +188,7 @@ export default function ServicesAndStats() {
               <div className="mb-6 text-[var(--color-hexon-teal)] bg-[var(--color-hexon-teal)]/10 p-4 rounded-full">
                 <stat.icon size={36} strokeWidth={1.5} />
               </div>
-              <h5 className="text-4xl md:text-6xl font-serif text-white mb-2">
+              <h5 className="text-4xl md:text-6xl font-serif text-zinc-900 mb-2">
                 <AnimatedCounter value={stat.value} />
               </h5>
               <span className="text-[var(--color-hexon-teal)] text-sm tracking-widest uppercase font-medium">
@@ -200,7 +200,7 @@ export default function ServicesAndStats() {
       </section>
 
       {/* 5. VIDEO SHOWCASE */}
-      <section className="relative w-full h-[60vh] md:h-[80vh] bg-black overflow-hidden border-y border-white/5">
+      <section className="relative w-full h-[60vh] md:h-[80vh] bg-white overflow-hidden border-y border-black/5">
         <video
           autoPlay
           muted
@@ -211,7 +211,7 @@ export default function ServicesAndStats() {
           {/* Default Unsplash/Pexels video placeholder. Can be replaced with actual video link */}
           <source src="https://videos.pexels.com/video-files/3163534/3163534-uhd_3840_2160_30fps.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
 
         <div className="relative z-10 w-full h-full flex items-center justify-center text-center px-6">
           <motion.h3

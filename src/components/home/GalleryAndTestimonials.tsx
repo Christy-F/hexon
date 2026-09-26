@@ -22,7 +22,7 @@ export default function GalleryAndTestimonials() {
   return (
     <>
       {/* 5. GALLERY SECTION */}
-      <section className="relative w-full py-32 bg-[#050505]">
+      <section className="relative w-full py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6 md:gap-0">
             <motion.div
@@ -34,7 +34,7 @@ export default function GalleryAndTestimonials() {
               <h2 className="text-[var(--color-hexon-gold)] text-sm tracking-[0.2em] uppercase font-semibold mb-4">
                 Our Workshops
               </h2>
-              <h3 className="text-4xl md:text-5xl font-serif text-white">
+              <h3 className="text-4xl md:text-5xl font-serif text-zinc-900">
                 Moments of Growth.
               </h3>
             </motion.div>
@@ -43,7 +43,7 @@ export default function GalleryAndTestimonials() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="mt-6 md:mt-0 px-6 py-2 rounded-full border border-[var(--color-hexon-teal)] text-[var(--color-hexon-teal)] hover:bg-[var(--color-hexon-teal)] hover:text-white transition-colors duration-300"
+              className="mt-6 md:mt-0 px-6 py-2 rounded-full border border-[var(--color-hexon-teal)] text-[var(--color-hexon-teal)] hover:bg-[var(--color-hexon-teal)] hover:text-zinc-900 transition-colors duration-300"
             >
               View Full Gallery
             </motion.button>
@@ -75,7 +75,7 @@ export default function GalleryAndTestimonials() {
       </section>
 
       {/* 6. TESTIMONIALS SECTION - SLIDER */}
-      <section className="relative w-full py-32 bg-[#0a0a0a] overflow-hidden">
+      <section className="relative w-full py-32 bg-white overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 text-center relative">
           <motion.h2 
             initial={{ opacity: 0, y: -20 }}
@@ -96,13 +96,13 @@ export default function GalleryAndTestimonials() {
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 className="absolute inset-0 flex flex-col items-center justify-center"
               >
-                <span className="absolute -top-10 left-1/2 -translate-x-1/2 text-[150px] text-white/5 font-serif leading-none">"</span>
+                <span className="absolute -top-10 left-1/2 -translate-x-1/2 text-[150px] text-zinc-900/5 font-serif leading-none">"</span>
                 
-                <p className="text-xl md:text-2xl text-gray-300 font-light leading-relaxed mb-8 relative z-10 italic">
+                <p className="text-xl md:text-2xl text-gray-700 font-light leading-relaxed mb-8 relative z-10 italic">
                   "{testimonials[currentIndex].feedback}"
                 </p>
                 <div className="w-12 h-[1px] bg-[var(--color-hexon-teal)] mb-4" />
-                <h5 className="text-white font-medium uppercase tracking-widest text-sm">
+                <h5 className="text-zinc-900 font-medium uppercase tracking-widest text-sm">
                   {testimonials[currentIndex].name}
                 </h5>
               </motion.div>
@@ -114,7 +114,7 @@ export default function GalleryAndTestimonials() {
               <button
                 key={idx}
                 onClick={() => setCurrentIndex(idx)}
-                className={`w-3 h-3 rounded-full transition-colors duration-300 ${idx === currentIndex ? "bg-[var(--color-hexon-teal)]" : "bg-white/20 hover:bg-white/40"}`}
+                className={`w-3 h-3 rounded-full transition-colors duration-300 ${idx === currentIndex ? "bg-[var(--color-hexon-teal)]" : "bg-black/20 hover:bg-black/40"}`}
                 aria-label={`Go to slide ${idx + 1}`}
               />
             ))}

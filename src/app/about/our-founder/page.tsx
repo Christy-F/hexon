@@ -51,7 +51,7 @@ export default function OurFounderPage() {
   }
 
   return (
-    <main className="w-full min-h-screen bg-[#0a0a0a] overflow-hidden">
+    <main className="w-full min-h-screen bg-white overflow-hidden">
       {/* Ambient background blobs */}
       <div className="fixed inset-0 pointer-events-none z-0">
         <div className="absolute top-20 left-1/4 w-[500px] h-[500px] bg-[var(--color-hexon-teal)]/5 rounded-full blur-[120px]" />
@@ -72,7 +72,7 @@ export default function OurFounderPage() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="text-6xl md:text-8xl font-serif text-white mb-4 leading-none"
+          className="text-6xl md:text-8xl font-serif text-zinc-900 mb-4 leading-none"
         >
           Our Founder
         </motion.h1>
@@ -108,7 +108,7 @@ export default function OurFounderPage() {
           />
 
           {/* Image card */}
-          <div className="relative rounded-[2rem] overflow-hidden bg-black shadow-2xl h-[500px] lg:h-[660px]">
+          <div className="relative rounded-[2rem] overflow-hidden bg-white shadow-2xl h-[500px] lg:h-[660px]">
             {/* Spotlight overlay that follows cursor */}
             <motion.div
               className="absolute inset-0 z-10 pointer-events-none"
@@ -129,7 +129,7 @@ export default function OurFounderPage() {
             />
 
             {/* Bottom gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent z-20" />
+            <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-white/10 to-transparent z-20" />
           </div>
         </motion.div>
 
@@ -141,7 +141,7 @@ export default function OurFounderPage() {
           transition={{ duration: 0.9, ease: "easeOut", delay: 0.1 }}
           className="flex flex-col justify-center pt-8 lg:pt-16"
         >
-          <h2 className="text-4xl md:text-5xl font-serif text-white mb-2">Archana Pandian</h2>
+          <h2 className="text-4xl md:text-5xl font-serif text-zinc-900 mb-2">Archana Pandian</h2>
           <p className="text-[var(--color-hexon-teal)] font-medium tracking-wide uppercase text-sm mb-10">
             Professional Certified Coach (ICF) • Founder of Hexon
           </p>
@@ -156,13 +156,13 @@ export default function OurFounderPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 * idx }}
                 whileHover={{ scale: 1.04, borderColor: "rgba(0,173,179,0.5)" }}
-                className="bg-white/3 border border-white/8 rounded-2xl p-4 flex items-center gap-3 cursor-default transition-colors duration-300"
+                className="bg-black/3 border border-black/8 rounded-2xl p-4 flex items-center gap-3 cursor-default transition-colors duration-300"
               >
                 <div className="bg-[var(--color-hexon-teal)]/10 p-2.5 rounded-xl shrink-0">
                   <item.icon size={18} className="text-[var(--color-hexon-teal)]" />
                 </div>
                 <div>
-                  <p className="text-white font-semibold text-sm">{item.label}</p>
+                  <p className="text-zinc-900 font-semibold text-sm">{item.label}</p>
                   <p className="text-gray-500 text-xs">{item.sub}</p>
                 </div>
               </motion.div>
@@ -175,7 +175,7 @@ export default function OurFounderPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg text-white italic border-l-4 border-[var(--color-hexon-gold)] pl-6 py-2 mb-6 leading-relaxed"
+            className="text-lg text-zinc-900 italic border-l-4 border-[var(--color-hexon-gold)] pl-6 py-2 mb-6 leading-relaxed"
           >
             Mrs. Archana Pandian is a Professional Certified Coach (ICF) — Leadership Coach, Corporate Behavioural Trainer, Learning & Capability Consultant, POSH Consultant and Founder of Hexon.
           </motion.p>
@@ -185,7 +185,7 @@ export default function OurFounderPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-gray-400 text-base leading-relaxed mb-10"
+            className="text-gray-600 text-base leading-relaxed mb-10"
           >
             She has over 20+ years of experience in Learning & Development across IT and non-IT industries (MNCs), giving her a 360-degree exposure in the L&D — HR space, encompassing Training need analysis, Competency mapping, Organizational Development Consulting, and delivery of behavioural programs across all management levels.
           </motion.p>
@@ -202,7 +202,7 @@ export default function OurFounderPage() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.05 * idx }}
                   whileHover={{ scale: 1.08, backgroundColor: "rgba(0,173,179,0.15)", borderColor: "rgba(0,173,179,0.6)" }}
-                  className="text-xs text-gray-300 border border-white/10 rounded-full px-4 py-1.5 cursor-default transition-colors duration-300"
+                  className="text-xs text-gray-700 border border-black/10 rounded-full px-4 py-1.5 cursor-default transition-colors duration-300"
                 >
                   {tag}
                 </motion.span>
@@ -219,7 +219,7 @@ export default function OurFounderPage() {
             transition={{ duration: 0.6, delay: 0.5 }}
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.97 }}
-            className="mt-10 inline-flex items-center gap-2 bg-[var(--color-hexon-teal)] text-white rounded-full px-8 py-4 font-medium text-sm hover:brightness-110 transition-all duration-300 self-start"
+            className="mt-10 inline-flex items-center gap-2 bg-[var(--color-hexon-teal)] text-zinc-900 rounded-full px-8 py-4 font-medium text-sm hover:brightness-110 transition-all duration-300 self-start"
           >
             Book a Session with Archana
             <ChevronRight size={16} />

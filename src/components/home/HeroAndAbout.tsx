@@ -44,13 +44,13 @@ export default function HeroAndAbout() {
       {/* 1. HERO SECTION */}
       <section
         ref={heroContainerRef}
-        className="relative h-screen w-full overflow-hidden bg-black flex items-center justify-center"
+        className="relative h-screen w-full overflow-hidden bg-white flex items-center justify-center"
       >
         <motion.div
           style={{ y: heroY, opacity: heroOpacity }}
           className="absolute inset-0 z-0"
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black z-10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/70 to-white z-10" />
           <AnimatePresence mode="popLayout">
             <motion.div
               key={currentImage}
@@ -79,7 +79,7 @@ export default function HeroAndAbout() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
-            className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight mb-8"
+            className="text-5xl md:text-7xl lg:text-8xl font-serif text-black leading-tight mb-8"
           >
             Transforming <br />
             <span className="italic text-[var(--color-hexon-teal)]">
@@ -92,7 +92,7 @@ export default function HeroAndAbout() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
-            className="text-gray-300 text-lg md:text-xl max-w-2xl mb-12 font-light"
+            className="text-gray-700 text-lg md:text-xl max-w-2xl mb-12 font-light"
           >
             Hexon India provides elite soft skills, leadership, and POSH training designed to elevate your organization's performance.
           </motion.p>
@@ -102,9 +102,9 @@ export default function HeroAndAbout() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
           >
-            <Link href="/book-an-appointment" className="relative group overflow-hidden rounded-full bg-[var(--color-hexon-teal)] px-8 py-4 text-white font-medium tracking-wide transition-all hover:scale-105 block">
+            <Link href="/book-an-appointment" className="relative group overflow-hidden rounded-full bg-[var(--color-hexon-teal)] px-8 py-4 text-zinc-900 font-medium tracking-wide transition-all hover:scale-105 block">
               <span className="relative z-10">Book a Consultation</span>
-              <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out" />
+              <div className="absolute inset-0 bg-black/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out" />
             </Link>
           </motion.div>
         </div>
@@ -115,7 +115,7 @@ export default function HeroAndAbout() {
           transition={{ delay: 1.5, duration: 1 }}
           className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2"
         >
-          <span className="text-gray-400 text-xs uppercase tracking-widest">Scroll</span>
+          <span className="text-gray-600 text-xs uppercase tracking-widest">Scroll</span>
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
@@ -125,7 +125,7 @@ export default function HeroAndAbout() {
       </section>
 
       {/* 2. PROMOTIONAL SECTION */}
-      <section className="relative w-full py-32 bg-[#050505] flex items-center justify-center px-6 overflow-hidden">
+      <section className="relative w-full py-32 bg-gray-50 flex items-center justify-center px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -133,13 +133,13 @@ export default function HeroAndAbout() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-6 leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-black mb-6 leading-tight">
               Every Individual Is <strong className="text-[var(--color-hexon-teal)] font-normal italic">Unique & Talented!</strong>
             </h2>
-            <p className="text-gray-300 text-lg leading-relaxed mb-8">
+            <p className="text-gray-700 text-lg leading-relaxed mb-8">
               We at Hexon, along with our experts, help individuals to develop their growth mindset. We offer an array of soft skill training programs, 1-1 coaching to individuals to upgrade their skills & unleash their potential.
             </p>
-            <Link href="/book-an-appointment" className="inline-block rounded-full bg-white text-black px-8 py-4 font-medium hover:bg-[var(--color-hexon-teal)] hover:text-white transition-colors duration-300">
+            <Link href="/book-an-appointment" className="inline-block rounded-full bg-white text-zinc-900 px-8 py-4 font-medium hover:bg-[var(--color-hexon-teal)] hover:text-zinc-900 transition-colors duration-300">
               Book an Appointment
             </Link>
           </motion.div>
@@ -159,7 +159,7 @@ export default function HeroAndAbout() {
       {/* 3. ABOUT SECTION */}
       <section
         ref={aboutSectionRef}
-        className="relative w-full min-h-screen bg-[#0a0a0a] flex items-center justify-center py-32 px-6"
+        className="relative w-full min-h-screen bg-white flex items-center justify-center py-32 px-6"
       >
         <div className="max-w-5xl mx-auto flex flex-col items-center">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
@@ -173,16 +173,16 @@ export default function HeroAndAbout() {
               <h2 className="text-[var(--color-hexon-gold)] text-sm tracking-[0.2em] uppercase font-semibold mb-6">
                 Who We Are
               </h2>
-              <h3 className="text-4xl md:text-5xl font-serif text-white leading-tight mb-8">
+              <h3 className="text-4xl md:text-5xl font-serif text-black leading-tight mb-8">
                 A plethora of learning solutions for organizations and individuals.
               </h3>
-              <p className="text-gray-300 text-lg leading-relaxed mb-6 font-light">
+              <p className="text-gray-700 text-lg leading-relaxed mb-6 font-light">
                 We aim at improving the overall business performance by enhancing employees' soft skills. We offer highly engaging boot camps, experiential corporate trainings, competency-based workshops, one-to-one skill enhancement programs, and coaching services in a structured way with a definite end objective.
               </p>
-              <p className="text-gray-300 text-lg leading-relaxed mb-8 font-light">
+              <p className="text-gray-700 text-lg leading-relaxed mb-8 font-light">
                 Over the last decade, the global workforce has been continually evolving, and there is a constant need for reskilling & upskilling.
               </p>
-              <Link href="/about/our-story" className="inline-block rounded-full border border-white/20 text-white px-8 py-3 font-medium hover:bg-[var(--color-hexon-teal)] hover:border-transparent transition-colors duration-300">
+              <Link href="/about/our-story" className="inline-block rounded-full border border-black/20 text-black px-8 py-3 font-medium hover:bg-[var(--color-hexon-teal)] hover:border-transparent hover:text-zinc-900 transition-colors duration-300">
                 Read Our Story
               </Link>
             </motion.div>

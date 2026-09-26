@@ -16,7 +16,7 @@ export default function Accreditations() {
 
   return (
     <>
-      <section className="relative w-full py-24 bg-[#050505] border-t border-white/5">
+      <section className="relative w-full py-24 bg-gray-50 border-t border-black/5">
         <div className="w-full px-6 md:px-16 text-center">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
@@ -35,7 +35,7 @@ export default function Accreditations() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ delay: idx * 0.2, duration: 0.6 }}
-                className="group cursor-pointer flex items-center justify-center p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.08] hover:border-white/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+                className="group cursor-pointer flex items-center justify-center p-6 rounded-2xl bg-white/[0.02] border border-black/5 hover:bg-white/[0.08] hover:border-black/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
                 onClick={() => setSelectedImage(acc.img)}
               >
                 <div className="relative w-full h-40 md:h-56 lg:h-64 flex items-center justify-center overflow-hidden">
@@ -49,7 +49,7 @@ export default function Accreditations() {
                   
                   {/* Hover Overlay Icon */}
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-xl">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-8 h-8 text-zinc-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
                     </svg>
                   </div>
@@ -87,7 +87,7 @@ export default function Accreditations() {
               />
               <button 
                 onClick={() => setSelectedImage(null)}
-                className="absolute top-4 right-4 bg-black/50 hover:bg-[var(--color-hexon-teal)] text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300 backdrop-blur-md"
+                className="absolute top-4 right-4 bg-black/50 hover:bg-[var(--color-hexon-teal)] text-zinc-900 w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300 backdrop-blur-md"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

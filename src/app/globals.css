@@ -5,16 +5,16 @@
   --color-hexon-teal-dark: #00878c;
   --color-hexon-gold: #cba86a;
   
-  --color-background: #0a0a0a;
-  --color-foreground: #ededed;
+  --color-background: #ffffff;
+  --color-foreground: #171717;
   
   --font-sans: var(--font-inter);
   --font-serif: var(--font-playfair);
 }
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: #ffffff;
+  --foreground: #171717;
 }
 
 body {
@@ -29,10 +29,10 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: #c1c1c1;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {

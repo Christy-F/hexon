@@ -54,7 +54,7 @@ export default function BookAppointmentPage() {
   };
 
   return (
-    <main className="w-full min-h-screen bg-[#0a0a0a] pt-32 pb-24 px-6 flex flex-col items-center">
+    <main className="w-full min-h-screen bg-white pt-32 pb-24 px-6 flex flex-col items-center">
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -64,13 +64,13 @@ export default function BookAppointmentPage() {
         <h1 className="text-[var(--color-hexon-gold)] text-sm tracking-[0.2em] uppercase font-semibold mb-6">
           Connect With Us
         </h1>
-        <h2 className="text-5xl md:text-7xl font-serif text-white mb-8">
+        <h2 className="text-5xl md:text-7xl font-serif text-zinc-900 mb-8">
           Book An Appointment.
         </h2>
-        <p className="text-gray-300 text-lg md:text-xl font-light leading-relaxed mb-4">
+        <p className="text-gray-700 text-lg md:text-xl font-light leading-relaxed mb-4">
           Get an Expert’s Advice for FREE – book an appointment NOW!
         </p>
-        <p className="text-gray-400 text-base">
+        <p className="text-gray-600 text-base">
           If you need more information regarding our services, block the calendar & our expert consultants will get in touch with you.
         </p>
       </motion.div>
@@ -81,23 +81,23 @@ export default function BookAppointmentPage() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="text-gray-300 space-y-6 bg-[#111] border border-white/10 p-8 md:p-12 rounded-2xl"
+          className="text-gray-700 space-y-6 bg-white border border-black/10 p-8 md:p-12 rounded-2xl"
         >
-          <h3 className="text-2xl text-white font-medium mb-6">How to book an appointment?</h3>
-          <ul className="space-y-6 relative border-l border-white/10 ml-4 pl-8">
+          <h3 className="text-2xl text-zinc-900 font-medium mb-6">How to book an appointment?</h3>
+          <ul className="space-y-6 relative border-l border-black/10 ml-4 pl-8">
             <li className="relative group">
-              <span className="absolute -left-[44px] bg-[var(--color-hexon-teal)] text-white w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold ring-4 ring-[#111] group-hover:scale-110 transition-transform">1</span>
-              <strong className="text-white block mb-1">Select Service</strong>
+              <span className="absolute -left-[44px] bg-[var(--color-hexon-teal)] text-zinc-900 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold ring-4 ring-[#111] group-hover:scale-110 transition-transform">1</span>
+              <strong className="text-zinc-900 block mb-1">Select Service</strong>
               Choose the service that you want to know about from the form.
             </li>
             <li className="relative group">
-              <span className="absolute -left-[44px] bg-[var(--color-hexon-teal)] text-white w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold ring-4 ring-[#111] group-hover:scale-110 transition-transform">2</span>
-              <strong className="text-white block mb-1">Pick Date & Time</strong>
+              <span className="absolute -left-[44px] bg-[var(--color-hexon-teal)] text-zinc-900 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold ring-4 ring-[#111] group-hover:scale-110 transition-transform">2</span>
+              <strong className="text-zinc-900 block mb-1">Pick Date & Time</strong>
               Select a convenient time slot from our available calendar.
             </li>
             <li className="relative group">
-              <span className="absolute -left-[44px] bg-[var(--color-hexon-teal)] text-white w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold ring-4 ring-[#111] group-hover:scale-110 transition-transform">3</span>
-              <strong className="text-white block mb-1">Fill in details</strong>
+              <span className="absolute -left-[44px] bg-[var(--color-hexon-teal)] text-zinc-900 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold ring-4 ring-[#111] group-hover:scale-110 transition-transform">3</span>
+              <strong className="text-zinc-900 block mb-1">Fill in details</strong>
               Provide your First Name, Last Name, E-mail ID, and Phone No.
             </li>
           </ul>
@@ -108,9 +108,9 @@ export default function BookAppointmentPage() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="bg-[#111] border border-white/10 p-8 md:p-12 rounded-2xl"
+          className="bg-white border border-black/10 p-8 md:p-12 rounded-2xl"
         >
-          <h3 className="text-2xl text-white font-medium mb-8">Schedule Session</h3>
+          <h3 className="text-2xl text-zinc-900 font-medium mb-8">Schedule Session</h3>
           
           {status === "success" ? (
             <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="bg-green-500/10 border border-green-500/20 text-green-400 p-6 rounded-lg text-center">
@@ -132,13 +132,13 @@ export default function BookAppointmentPage() {
               )}
 
               <div>
-                <label className="block text-sm font-medium text-gray-400 mb-2">Service</label>
+                <label className="block text-sm font-medium text-gray-600 mb-2">Service</label>
                 <select 
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
                   required
-                  className="w-full bg-black border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--color-hexon-teal)] transition-colors appearance-none"
+                  className="w-full bg-white border border-black/20 rounded-lg px-4 py-3 text-zinc-900 focus:outline-none focus:border-[var(--color-hexon-teal)] transition-colors appearance-none"
                 >
                   <option>Corporate Training Programs</option>
                   <option>Young Aspirers</option>
@@ -152,26 +152,26 @@ export default function BookAppointmentPage() {
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-400 mb-2">First Name</label>
+                  <label className="block text-sm font-medium text-gray-600 mb-2">First Name</label>
                   <input 
                     type="text" 
                     name="firstName"
                     value={formData.firstName}
                     onChange={handleChange}
                     required
-                    className="w-full bg-black border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--color-hexon-teal)] transition-colors" 
+                    className="w-full bg-white border border-black/20 rounded-lg px-4 py-3 text-zinc-900 focus:outline-none focus:border-[var(--color-hexon-teal)] transition-colors" 
                     placeholder="John" 
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-400 mb-2">Last Name</label>
+                  <label className="block text-sm font-medium text-gray-600 mb-2">Last Name</label>
                   <input 
                     type="text" 
                     name="lastName"
                     value={formData.lastName}
                     onChange={handleChange}
                     required
-                    className="w-full bg-black border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--color-hexon-teal)] transition-colors" 
+                    className="w-full bg-white border border-black/20 rounded-lg px-4 py-3 text-zinc-900 focus:outline-none focus:border-[var(--color-hexon-teal)] transition-colors" 
                     placeholder="Doe" 
                   />
                 </div>
@@ -179,40 +179,40 @@ export default function BookAppointmentPage() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-400 mb-2">Email</label>
+                  <label className="block text-sm font-medium text-gray-600 mb-2">Email</label>
                   <input 
                     type="email" 
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full bg-black border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--color-hexon-teal)] transition-colors" 
+                    className="w-full bg-white border border-black/20 rounded-lg px-4 py-3 text-zinc-900 focus:outline-none focus:border-[var(--color-hexon-teal)] transition-colors" 
                     placeholder="john@example.com" 
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-400 mb-2">Phone No.</label>
+                  <label className="block text-sm font-medium text-gray-600 mb-2">Phone No.</label>
                   <input 
                     type="tel" 
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    className="w-full bg-black border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--color-hexon-teal)] transition-colors" 
+                    className="w-full bg-white border border-black/20 rounded-lg px-4 py-3 text-zinc-900 focus:outline-none focus:border-[var(--color-hexon-teal)] transition-colors" 
                     placeholder="+91" 
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-400 mb-2">Preferred Date & Time</label>
+                <label className="block text-sm font-medium text-gray-600 mb-2">Preferred Date & Time</label>
                 <input 
                   type="datetime-local" 
                   name="preferredDate"
                   value={formData.preferredDate}
                   onChange={handleChange}
                   required
-                  className="w-full bg-black border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--color-hexon-teal)] transition-colors" 
+                  className="w-full bg-white border border-black/20 rounded-lg px-4 py-3 text-zinc-900 focus:outline-none focus:border-[var(--color-hexon-teal)] transition-colors" 
                   style={{ colorScheme: "dark" }} 
                 />
               </div>
@@ -220,7 +220,7 @@ export default function BookAppointmentPage() {
               <button 
                 type="submit" 
                 disabled={status === "loading"}
-                className="w-full bg-[var(--color-hexon-teal)] hover:bg-[#007f8a] text-white font-medium py-4 rounded-lg transition-colors mt-4 disabled:opacity-50 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-[1.02] duration-300"
+                className="w-full bg-[var(--color-hexon-teal)] hover:bg-[#007f8a] text-zinc-900 font-medium py-4 rounded-lg transition-colors mt-4 disabled:opacity-50 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-[1.02] duration-300"
               >
                 {status === "loading" ? "Confirming..." : "Confirm Appointment"}
               </button>
